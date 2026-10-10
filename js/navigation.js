@@ -90,15 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         link.addEventListener("click", () => {
 
-            /*
-             * On mobile:
-             * close the navigation after selecting
-             * a section.
-             *
-             * On desktop:
-             * keep the navigation open.
-             */
-
             if (isMobile()) {
                 closeNavigation();
             }
@@ -109,29 +100,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       CLOSE OUTSIDE NAVIGATION
-       MOBILE ONLY
+       CLOSE OUTSIDE NAVIGATION (MOBILE ONLY)
     ================================================== */
 
     document.addEventListener("click", (event) => {
 
-        /*
-         * Desktop:
-         * Do nothing.
-         *
-         * The expanded navbar should remain visible.
-         */
-
         if (!isMobile()) {
             return;
         }
-
-
-        /*
-         * Mobile:
-         * Close if the click is outside
-         * the navigation wrapper.
-         */
 
         if (
             navWrapper.classList.contains("expanded") &&
@@ -159,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       ACTIVE NAVIGATION LINK
+       ACTIVE NAVIGATION LINK (SCROLL OBSERVER)
     ================================================== */
 
     const sections = document.querySelectorAll("section[id]");
@@ -226,11 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("resize", () => {
 
-        /*
-         * When switching to desktop,
-         * keep the navbar expanded.
-         */
-
         if (!isMobile()) {
 
             openNavigation();
@@ -241,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       INITIAL STATE
+       INITIAL NAVIGATION STATE
     ================================================== */
 
     if (isMobile()) {
@@ -256,5 +227,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     console.log("Navigation initialized successfully.");
+
+
+
+    /* ==================================================
+       STACK / TOOLS TAB SWITCHER
+    ================================================== */
+const skillTabBtns = document.querySelectorAll(".skills-tab-btn");
+const stackPanels = document.querySelectorAll(".stack-panel");
+
+if (skillTabBtns.length > 0 && stackPanels.length > 0) {
+
+    function switchStackPanel(targetTab) {
+
+        // Update active tab button
+        skillTabBtns.forEach((btn) => {
+            btn.classList.toggle(
+                "active",
+                btn.getAttribute("data-tab") === targetTab
+            );
+        });
+
+        // Update active card
+        stackPanels.forEach((panel) => {
+            const isActive = panel.id === `panel-${targetTab}`;
+
+            panel.classList.toggle("active", isActive);
+            panel.setAttribute("aria-hidden", isActive ? "false" : "true");
+        });
+    }
+
+    skillTabBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const targetTab = btn.getAttribute("data-tab");
+
+            if (targetTab) {
+                switchStackPanel(targetTab);
+            }
+        });
+    });
+
+    // Set initial state according to the active button
+    const initialActiveTab =
+        document.querySelector(".skills-tab-btn.active");
+
+    if (initialActiveTab) {
+        switchStackPanel(
+            initialActiveTab.getAttribute("data-tab")
+        );
+    } else {
+        switchStackPanel("skills");
+    }
+}
 
 });

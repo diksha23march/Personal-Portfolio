@@ -26,11 +26,8 @@
 <body>
 
     <header id="header">
-
         <nav id="navbar" class="navbar">
-
             <div class="nav-wrapper collapsed">
-
                 <button id="nav-toggle" type="button" aria-label="Toggle Navigation" aria-expanded="false">
                     <span class="logo-text">DK.</span>
                 </button>
@@ -39,62 +36,25 @@
                 <div class="nav-menu" aria-hidden="true">
 
                     <ul class="nav-links">
-
-                        <li>
-                            <a href="#home" class="nav-link">
-                                Home
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#about" class="nav-link">
-                                About
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#skills" class="nav-link">
-                                Skills
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#projects" class="nav-link">
-                                Projects
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#resume" class="nav-link">
-                                Resume
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#contact" class="nav-link">
-                                Contact
-                            </a>
-                        </li>
-
+                        <li> <a href="#home" class="nav-link">Home</a> </li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li> <a href="#skills" class="nav-link">Skills</a> </li>
+                        <li> <a href="#projects" class="nav-link">Projects</a> </li>
+                        <li> <a href="#resume" class="nav-link">Resume</a> </li>
+                        <li> <a href="#contact" class="nav-link">Contact</a> </li>
                     </ul>
 
-
                     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle Theme">
-
                         <svg id="theme-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 12.79A9 9 0 1111.21 3
                             7 7 0 0021 12.79z" />
                         </svg>
-
                     </button>
 
                 </div>
-
             </div>
-
         </nav>
-
     </header>
 
 
@@ -217,10 +177,9 @@
                             <span class="radar-label radar-left-bottom">Databases</span>
                             <span class="radar-label radar-left">C++ / Java</span>
                         </div>
+
                     </div>
-
                 </div>
-
             </div>
         </section>
 
@@ -344,149 +303,189 @@
         <!-- =====================================
             SKILLS / STACK SHOWCASE
         ====================================== -->
-        <section id="skills" class="skills">
-            <div class="container skills-showcase">
+        <section id="skills" class="skills-section">
+            <div class="container skills-container-new">
 
-                <!-- LEFT COLUMN: COPY & INTERACTIVE TABS -->
-                <div class="skills-copy">
-                    <span class="skills-overline">— MY STACK</span>
+                <!-- LEFT SIDE CONTENT -->
+                <div class="skills-left">
+                    <span class="about-overline">— MY STACK</span>
 
-                    <h2>My development<br><span>stack.</span></h2>
+                    <h2 class="skills-title">My development<br><span>stack.</span></h2>
 
-                    <p class="skills-intro">
-                        Technologies I use to build responsive interfaces, full-stack applications,
-                        APIs, databases, and practical software projects.
+                    <p class="skills-description">
+                        Separated so you can quickly see what I build with and the tools I use to ship it.
                     </p>
 
-                    <!-- INTERACTIVE TAB PILLS -->
-                    <div class="stack-tabs" role="tablist">
-                        <button class="stack-tab active" data-tab="skills" role="tab" aria-selected="true">
-                            Skills
-                        </button>
-                        <button class="stack-tab" data-tab="tools" role="tab" aria-selected="false">
-                            Tools
-                        </button>
+                    <!-- TAB SWITCHER -->
+                    <div class="skills-tabs-pill">
+                        <button class="skills-tab-btn active" id="btn-skills"
+                            onclick="switchStackTab('skills')">Skills</button>
+                        <button class="skills-tab-btn" id="btn-tools" onclick="switchStackTab('tools')">Tools</button>
                     </div>
 
-                    <!-- FOCUS HIGHLIGHTS -->
-                    <div class="stack-focus">
-                        <div>
-                            <i class="fa-solid fa-code" aria-hidden="true"></i>
-                            <span>
+                    <!-- HIGHLIGHT FEATURES -->
+                    <div class="skills-highlights">
+                        <div class="skills-highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <div>
                                 <strong>Build</strong>
-                                <small>Practical projects</small>
-                            </span>
+                                <span>Practical projects</span>
+                            </div>
                         </div>
 
-                        <div>
-                            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-                            <span>
+                        <div class="skills-highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
                                 <strong>Learn</strong>
-                                <small>Explore new tech</small>
-                            </span>
+                                <span>Explore new tech</span>
+                            </div>
                         </div>
 
-                        <div>
-                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-                            <span>
+                        <div class="skills-highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                    <polyline points="17 6 23 6 23 12"></polyline>
+                                </svg>
+                            </div>
+                            <div>
                                 <strong>Grow</strong>
-                                <small>Improve continuously</small>
-                            </span>
+                                <span>Improve continuously</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- RIGHT COLUMN: COMPACT ICON GRID DISPLAY -->
-                <div class="stack-display glass-card">
+                <!-- RIGHT SIDE CONTAINER (TAB PANELS) -->
+                <div class="skills-right-glass">
 
-                    <!-- SKILLS GRID (ACTIVE BY DEFAULT) -->
-                    <div class="stack-grid" id="tab-skills" role="tabpanel">
-
-                        <div class="tech-icon" data-name="C++">
-                            <i class="devicon-cplusplus-plain colored"></i>
+                    <!-- SKILLS GRID PANEL -->
+                    <div id="panel-skills" class="stack-panel active">
+                        <div class="panel-header">
+                            <div>
+                                <h3>Skills & Technologies</h3>
+                                <p>Languages, frameworks and databases.</p>
+                            </div>
                         </div>
 
-                        <div class="tech-icon" data-name="Java">
-                            <i class="devicon-java-plain colored"></i>
+                        <div class="stack-grid">
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                                    alt="C++" />
+                                <span>C++</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                    alt="Java" />
+                                <span>Java</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python" />
+                                <span>Python</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript" />
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    alt="HTML5" />
+                                <span>HTML5</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS3" />
+                                <span>CSS3</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                    alt="React" />
+                                <span>React</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                    alt="Node.js" />
+                                <span>Node.js</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                                    alt="Express" class="express-icon" />
+                                <span>Express</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                    alt="PostgreSQL" />
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                    alt="MySQL" />
+                                <span>MySQL</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                    alt="MongoDB" />
+                                <span>MongoDB</span>
+                            </div>
                         </div>
-
-                        <div class="tech-icon" data-name="Python">
-                            <i class="devicon-python-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="JavaScript">
-                            <i class="devicon-javascript-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="TypeScript">
-                            <i class="devicon-typescript-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="HTML5">
-                            <i class="devicon-html5-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="CSS3">
-                            <i class="devicon-css3-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="React">
-                            <i class="devicon-react-original colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="Node.js">
-                            <i class="devicon-nodejs-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="Express">
-                            <i class="devicon-express-original"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="PostgreSQL">
-                            <i class="devicon-postgresql-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="MySQL">
-                            <i class="devicon-mysql-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="MongoDB">
-                            <i class="devicon-mongodb-plain colored"></i>
-                        </div>
-
                     </div>
 
-                    <!-- TOOLS GRID (HIDDEN BY DEFAULT) -->
-                    <div class="stack-grid" id="tab-tools" role="tabpanel" hidden>
-
-                        <div class="tech-icon" data-name="Git">
-                            <i class="devicon-git-plain colored"></i>
+                    <!-- TOOLS GRID PANEL -->
+                    <div id="panel-tools" class="stack-panel">
+                        <div class="panel-header">
+                            <div>
+                                <h3>Tools & Platforms</h3>
+                                <p>Development, testing and deployment workflow.</p>
+                            </div>
                         </div>
 
-                        <div class="tech-icon" data-name="GitHub">
-                            <i class="devicon-github-original"></i>
+                        <div class="stack-grid">
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                    alt="Git" />
+                                <span>Git</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                    alt="GitHub" class="theme-icon" />
+                                <span>GitHub</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                    alt="VS Code" />
+                                <span>VS Code</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+                                    alt="Postman" />
+                                <span>Postman</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
+                                    alt="Vercel" class="theme-icon" />
+                                <span>Vercel</span>
+                            </div>
+                            <div class="stack-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                    alt="Docker" />
+                                <span>Docker</span>
+                            </div>
                         </div>
-
-                        <div class="tech-icon" data-name="VS Code">
-                            <i class="devicon-vscode-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="Postman">
-                            <i class="devicon-postman-plain colored"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="Vercel">
-                            <i class="devicon-vercel-original"></i>
-                        </div>
-
-                        <div class="tech-icon" data-name="Docker">
-                            <i class="devicon-docker-plain colored"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="stack-hint">
-                        <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i> Hover cards for tech name
                     </div>
 
                 </div>
@@ -617,9 +616,7 @@
                             </a>
                         </div>
                     </article>
-
                 </div>
-
             </div>
         </section>
 
@@ -731,17 +728,15 @@
                                 </p>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </section>
 
 
         <!-- =====================================
          ACHIEVEMENTS & MILESTONES
-====================================== -->
+        ====================================== -->
         <section id="achievements" class="achievements">
             <div class="container">
 
@@ -795,14 +790,13 @@
                     </div>
 
                 </div>
-
             </div>
         </section>
 
 
         <!-- =====================================
            DEVLOGS / ARTICLES
-====================================== -->
+        ====================================== -->
         <section id="devlogs" class="devlogs">
             <div class="container">
 
@@ -936,9 +930,7 @@
                             </a>
                         </div>
                     </article>
-
                 </div>
-
             </div>
         </section>
 
@@ -948,211 +940,198 @@
         ====================================== -->
 
         <section id="resume" class="resume">
-
             <div class="container">
 
                 <div class="section-title">
-
-                    <h2>
-                        Resume
-                    </h2>
-
-
-                    <p>
-                        Download or view my latest resume.
-                    </p>
-
+                    <h2>Resume</h2>
+                    <p>Download or view my latest resume.</p>
                 </div>
 
-
-
                 <div class="resume-card">
-
-                    <h3>
-                        Diksha Kumari
-                    </h3>
-
-
-                    <p>
-
-                        Computer Science Student
-
-                        <br>
-
-                        Aspiring Software Developer
-
-                    </p>
-
-
-
+                    <h3>Diksha Kumari</h3>
+                    <p>Computer Science Student<br>Aspiring Software Developer</p>
                     <div class="resume-buttons">
-
-
-                        <a href="assets/resume/resume.pdf" target="_blank" class="btn">
-                            View Resume
-                        </a>
-
-
-                        <a href="assets/resume/resume.pdf" download class="btn-outline">
-                            Download Resume
-                        </a>
-
+                        <a href="assets/resume/resume.pdf" target="_blank" class="btn">View Resume</a>
+                        <a href="assets/resume/resume.pdf" download class="btn-outline">Download Resume</a>
                     </div>
-
                 </div>
 
             </div>
-
         </section>
-
 
 
         <!-- =====================================
             CONTACT SECTION
-====================================== -->
-<section id="contact" class="contact">
-    <div class="container">
+        ====================================== -->
+        <section id="contact" class="contact">
+            <div class="container">
 
-        <!-- CENTERED HEADER -->
-        <div class="contact-header">
-            <span class="contact-overline">— CONTACT</span>
-            <h2 class="contact-title">
-                Let's build something<br>
-                <span>meaningful.</span>
-            </h2>
-            <p class="contact-subtitle">
-                I'm actively looking for internship opportunities in software engineering and web development. Let's connect.
-            </p>
-        </div>
+                <!-- CENTERED HEADER -->
+                <div class="contact-header">
+                    <span class="contact-overline">— CONTACT</span>
+                    <h2 class="contact-title">
+                        Let's build something<br>
+                        <span>meaningful.</span>
+                    </h2>
+                    <p class="contact-subtitle">
+                        I'm actively looking for internship opportunities in software engineering and web development.
+                        Let's connect.
+                    </p>
+                </div>
 
-        <!-- TWO GLASS CARDS GRID -->
-        <div class="contact-grid">
+                <!-- TWO GLASS CARDS GRID -->
+                <div class="contact-grid">
 
-            <!-- LEFT CARD: Let's Talk -->
-            <div class="contact-card glass-card">
-                <h3>Let's talk</h3>
-                <p>
-                    I'm open to internship conversations, project collaborations, and interesting opportunities.
-                </p>
+                    <!-- LEFT CARD: Let's Talk -->
+                    <div class="contact-card glass-card">
+                        <h3>Let's talk</h3>
+                        <p>I'm open to internship conversations, project collaborations, and interesting opportunities.
+                        </p>
 
-                <a href="mailto:diksha23march@gmail.com" class="contact-email-btn">
-                    <i class="fa-regular fa-envelope" aria-hidden="true"></i> Send an email
-                </a>
+                        <a href="mailto:diksha23march@gmail.com" class="contact-email-btn"><i
+                                class="fa-regular fa-envelope" aria-hidden="true"></i> Send an email</a>
+                        <span class="contact-email-address">diksha23march@gmail.com</span>
+                    </div>
 
-                <span class="contact-email-address">
-                    diksha23march@gmail.com
-                </span>
-            </div>
+                    <!-- RIGHT CARD: Find Me Online -->
+                    <div class="contact-card glass-card">
+                        <h3>Find me online</h3>
+                        <p>See my work and follow my journey across platforms.</p>
 
-            <!-- RIGHT CARD: Find Me Online -->
-            <div class="contact-card glass-card">
-                <h3>Find me online</h3>
-                <p>
-                    See my work and follow my journey across platforms.
-                </p>
+                        <div class="contact-online-links">
+                            <!-- GitHub Link Item -->
+                            <a href="https://github.com/diksha23march" target="_blank" rel="noopener noreferrer"
+                                class="online-link-item">
+                                <div class="online-link-icon">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                </div>
+                                <div class="online-link-details">
+                                    <strong>GitHub</strong>
+                                    <span>@diksha23march</span>
+                                </div>
+                            </a>
 
-                <div class="contact-online-links">
-                    <!-- GitHub Link Item -->
-                    <a href="https://github.com/diksha23march" target="_blank" rel="noopener noreferrer" class="online-link-item">
-                        <div class="online-link-icon">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            <!-- LinkedIn Link Item -->
+                            <a href="https://www.linkedin.com/in/diksha2303/" target="_blank" rel="noopener noreferrer"
+                                class="online-link-item">
+                                <div class="online-link-icon">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                </div>
+                                <div class="online-link-details">
+                                    <strong>LinkedIn</strong>
+                                    <span>Diksha Kumari</span>
+                                </div>
+                            </a>
+
                         </div>
-                        <div class="online-link-details">
-                            <strong>GitHub</strong>
-                            <span>@diksha23march</span>
-                        </div>
-                    </a>
-
-                    <!-- LinkedIn Link Item -->
-                    <a href="https://www.linkedin.com/in/diksha2303/" target="_blank" rel="noopener noreferrer" class="online-link-item">
-                        <div class="online-link-icon">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </div>
-                        <div class="online-link-details">
-                            <strong>LinkedIn</strong>
-                            <span>Diksha Kumari</span>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-    </div>
-</section>
+        </section>
 
 
-
-    <!-- =====================================
+        <!-- =====================================
                        FOOTER
-    ====================================== -->
-
-    <footer>
-
-        <p>
-            © 2026 Diksha| All rights reserved
-        </p>
-
-    </footer>
+        ====================================== -->
+        <footer>
+            <p>© 2026 Diksha| All rights reserved</p>
+        </footer>
 
 
+        <!-- ORIGINAL JAVASCRIPT FILES -->
 
-    <!-- ORIGINAL JAVASCRIPT FILES -->
+        <script src="js/navigation.js"></script>
+        <script src="js/theme.js"></script>
 
-    <script src="js/navigation.js"></script>
+        <script>
+            /* Skills / Tools card switcher */
+            window.switchStackTab = function (tab) {
+                const skillsPanel = document.getElementById("panel-skills");
+                const toolsPanel = document.getElementById("panel-tools");
+                const skillsButton = document.getElementById("btn-skills");
+                const toolsButton = document.getElementById("btn-tools");
 
-    <script src="js/theme.js"></script>
+                if (!skillsPanel || !toolsPanel || !skillsButton || !toolsButton) return;
 
+                const showSkills = tab === "skills";
 
-    <script>
-        /* Hero stack.ts typing animation */
-        (() => {
-            const target = document.getElementById("stackTypingCode");
-            if (!target) return;
+                skillsPanel.classList.toggle("active", showSkills);
+                toolsPanel.classList.toggle("active", !showSkills);
 
-            const lines = [
-                "const stack = [",
-                '  "React",',
-                '  "Node.js",',
-                '  "Python",',
-                '  "PostgreSQL"',
-                "];",
-                "",
-                'const passion = "building',
-                '  things that matter";'
-            ];
+                skillsButton.classList.toggle("active", showSkills);
+                toolsButton.classList.toggle("active", !showSkills);
 
-            const code = lines.join("\n");
-            const radar = document.querySelector(".hero-radar-card");
-            let index = 0;
-
-            const moveRadarWithTyping = () => {
-                if (!radar) return;
-                radar.classList.remove("is-typing");
-                void radar.offsetWidth;
-                radar.classList.add("is-typing");
+                skillsButton.setAttribute("aria-pressed", String(showSkills));
+                toolsButton.setAttribute("aria-pressed", String(!showSkills));
             };
 
-            const typeCode = () => {
-                target.textContent = code.slice(0, index);
-                moveRadarWithTyping();
+            switchStackTab("skills");
 
-                if (index < code.length) {
-                    index++;
-                    window.setTimeout(typeCode, index < 18 ? 42 : 28);
-                } else {
-                    window.setTimeout(() => {
-                        index = 0;
-                        target.textContent = "";
-                        typeCode();
-                    }, 3200);
-                }
-            };
+            /* Keep the scrollbar synchronized with the existing body theme class. */
+            (() => {
+                const syncScrollbarTheme = () => {
+                    document.documentElement.classList.toggle(
+                        "dark-scrollbar",
+                        document.body.classList.contains("dark-mode")
+                    );
+                };
 
-            typeCode();
-        })();
-    </script>
+                syncScrollbarTheme();
 
+                new MutationObserver(syncScrollbarTheme).observe(document.body, {
+                    attributes: true,
+                    attributeFilter: ["class"]
+                });
+            })();
+        </script>
+
+        <script>
+            /* Hero stack.ts typing animation */
+            (() => {
+                const target = document.getElementById("stackTypingCode");
+                if (!target) return;
+
+                const lines = [
+                    "const stack = [",
+                    '  "React",',
+                    '  "Node.js",',
+                    '  "Python",',
+                    '  "PostgreSQL"',
+                    "];",
+                    "",
+                    'const passion = "building',
+                    '  things that matter";'
+                ];
+
+                const code = lines.join("\n");
+                const radar = document.querySelector(".hero-radar-card");
+                let index = 0;
+
+                const moveRadarWithTyping = () => {
+                    if (!radar) return;
+                    radar.classList.remove("is-typing");
+                    void radar.offsetWidth;
+                    radar.classList.add("is-typing");
+                };
+
+                const typeCode = () => {
+                    target.textContent = code.slice(0, index);
+                    moveRadarWithTyping();
+
+                    if (index < code.length) {
+                        index++;
+                        window.setTimeout(typeCode, index < 18 ? 42 : 28);
+                    } else {
+                        window.setTimeout(() => {
+                            index = 0;
+                            target.textContent = "";
+                            typeCode();
+                        }, 3200);
+                    }
+                };
+                typeCode();
+            })();
+        </script>
 </body>
 
 </html>
