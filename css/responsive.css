@@ -1,0 +1,67 @@
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .skills-container { grid-template-columns: repeat(2, 1fr); }
+  .certifications-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 850px) {
+  .hero-container-new,
+  .about-container,
+  .projects-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content-new {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero-buttons-new,
+  .hero-focus {
+    justify-content: center;
+  }
+
+  .hero-visual-new {
+    margin-top: 20px;
+  }
+
+  .featured-project {
+    grid-column: auto;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-container { grid-template-columns: 1fr; }
+  .about-highlights { grid-template-columns: 1fr; }
+
+  .hero-buttons-new,
+  .resume-buttons {
+    flex-direction: column;
+  }
+
+  .btn, .btn-outline {
+    width: 100%;
+  }
+
+  .hero-chip-role {
+    display: none;
+  }
+
+  .hero-radar-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  .hero-visual-new {
+    flex-direction: column;
+    min-height: auto;
+  }
+}

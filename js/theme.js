@@ -58,3 +58,21 @@ function updateThemeIcon(){
     }
 
 }
+
+/* Keep the scrollbar synchronized with the body theme class */
+
+(() => {
+    const syncScrollbarTheme = () => {
+        document.documentElement.classList.toggle(
+            "dark-scrollbar",
+            document.body.classList.contains("dark-mode")
+        );
+    };
+
+    syncScrollbarTheme();
+
+    new MutationObserver(syncScrollbarTheme).observe(document.body, {
+        attributes: true,
+        attributeFilter: ["class"]
+    });
+})();

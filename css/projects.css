@@ -1,0 +1,52 @@
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.project-card {
+  padding: 28px;
+  border-radius: var(--radius-large);
+}
+
+.featured-project {
+  grid-column: 1 / -1;
+}
+
+.project-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(128, 0, 32, 0.07);
+  color: var(--primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.project-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+.project-card p { font-size: 0.88rem; margin-bottom: 18px; }
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.secondary-link {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.secondary-link:hover {
+  background: var(--primary);
+  color: #fff;
+}

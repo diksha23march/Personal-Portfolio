@@ -1,0 +1,16 @@
+.resume-card {
+  padding: 40px;
+  border-radius: var(--radius-large);
+  background: var(--glass);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.resume-card h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.resume-card p { margin-bottom: 24px; }
+
+.resume-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}

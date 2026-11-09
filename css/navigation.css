@@ -1,0 +1,120 @@
+#header {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.nav-wrapper {
+  width: var(--nav-collapsed-width);
+  height: var(--nav-height);
+  max-width: var(--nav-expanded-width);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(var(--blur));
+  box-shadow: var(--shadow-soft);
+  transition: width 0.45s ease, border-radius 0.35s ease, background 0.35s ease;
+}
+
+.nav-wrapper.expanded {
+  width: var(--nav-expanded-width);
+}
+
+#nav-toggle {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.32);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+}
+
+#nav-toggle:hover {
+  transform: scale(1.04);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.logo-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease 0.18s, visibility 0.25s ease 0.18s;
+}
+
+.nav-wrapper.expanded .nav-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--heading);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  border-radius: 20px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+#theme-toggle {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.22);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+  background: rgba(255, 255, 255, 0.42);
+}
