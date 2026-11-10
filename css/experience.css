@@ -1,42 +1,292 @@
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 24px;
+/* =====================================
+   EXPERIENCE & LEARNING SECTION
+===================================== */
+
+.experience {
+    padding: 100px 0;
 }
 
-.timeline-item {
-  position: relative;
-  padding: 28px 32px 28px 42px;
-  border-radius: var(--radius-large);
+/* =====================================
+   SECTION HEADER
+===================================== */
+
+.experience-header {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 40px;
 }
 
-.timeline-dot {
-  position: absolute;
-  left: 20px;
-  top: 36px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 0 4px rgba(128, 0, 32, 0.15);
+.experience-overline {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.experience-title {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* =====================================
+   TIMELINE WRAPPER
+===================================== */
+
+.timeline-wrapper {
+    position: relative;
+    width: 100%;
+    padding-left: 52px;
+}
+
+/* VERTICAL TIMELINE TRACK */
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 17px;
+    width: 1px;
+    background: var(--primary);
+    opacity: 0.55;
+}
+
+/* TIMELINE ITEMS */
+
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.timeline-card-group {
+    position: relative;
+    width: 100%;
+}
+
+/* =====================================
+   TIMELINE MARKERS
+===================================== */
+
+.timeline-node {
+    position: absolute;
+    top: 24px;
+    left: -41px;
+    z-index: 2;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    background: var(--bg);
+    box-shadow: 0 0 0 4px rgba(128, 0, 32, 0.12);
+}
+
+/* =====================================
+   TIMELINE CARDS
+===================================== */
+
+.timeline-card {
+    width: 100%;
+    padding: 20px 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    background: var(--glass);
+    box-shadow: var(--shadow-medium);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+/* =====================================
+   CARD HEADER
+===================================== */
+
+.timeline-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.timeline-card-header h3 {
+    margin: 0 0 5px;
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+/* ORGANIZATION / PLATFORM */
+
+.timeline-organization {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* =====================================
+   DATE AND CATEGORY BADGE
+===================================== */
+
+.timeline-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
 .timeline-date {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
-.timeline-header h3 {
-  margin: 4px 0 2px;
+.timeline-date i {
+    font-size: 0.8rem;
 }
 
-.timeline-subtitle {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-bottom: 12px;
+.timeline-badge {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 30px;
+    background: rgba(128, 0, 32, 0.09);
+    color: var(--primary);
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* =====================================
+   CARD DESCRIPTION
+===================================== */
+
+.timeline-description {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .experience {
+        padding: 75px 0;
+    }
+
+    .experience-header {
+        margin-bottom: 32px;
+    }
+
+    .experience-overline {
+        margin-bottom: 10px;
+        font-size: 0.75rem;
+    }
+
+    .experience-title {
+        font-size: clamp(1.9rem, 6vw, 2.5rem);
+    }
+
+    .timeline-wrapper {
+        padding-left: 38px;
+    }
+
+    .timeline-line {
+        left: 11px;
+    }
+
+    .timeline-node {
+        left: -32px;
+        top: 22px;
+        width: 11px;
+        height: 11px;
+    }
+
+    .timeline-items {
+        gap: 18px;
+    }
+
+    .timeline-card {
+        padding: 18px;
+    }
+
+    .timeline-card-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .timeline-card-header h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-meta {
+        justify-content: flex-start;
+    }
+
+    .timeline-description {
+        margin-top: 10px;
+        font-size: 0.85rem;
+        line-height: 1.65;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .experience {
+        padding: 60px 0;
+    }
+
+    .timeline-wrapper {
+        padding-left: 30px;
+    }
+
+    .timeline-line {
+        left: 8px;
+    }
+
+    .timeline-node {
+        left: -26px;
+        top: 20px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-card {
+        padding: 16px;
+    }
+
+    .timeline-meta {
+        gap: 7px;
+    }
+
+    .timeline-date {
+        font-size: 0.76rem;
+    }
+
+    .timeline-badge {
+        padding: 5px 9px;
+        font-size: 0.68rem;
+    }
 }
